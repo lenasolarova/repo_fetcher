@@ -1,0 +1,14 @@
+Name,URL
+crane-batch-migration,https://github.com/water-hole/crane-batch-migration
+poc-retablir,https://github.com/water-hole/poc-retablir
+transformations,https://github.com/water-hole/transformations
+extractor,https://github.com/water-hole/extractor
+etcd-ansible-operator,https://github.com/water-hole/etcd-ansible-operator
+galera-ansible-operator,https://github.com/water-hole/galera-ansible-operator
+ansible-operator,https://github.com/water-hole/ansible-operator
+kind,https://github.com/water-hole/kind
+bitcoin-sv-operator,https://github.com/water-hole/bitcoin-sv-operator
+vault-ansible-operator,https://github.com/water-hole/vault-ansible-operator
+ao-training-modules,https://github.com/water-hole/ao-training-modules
+memcached-ansible-operator,https://github.com/water-hole/memcached-ansible-operator
+ansiblefest-2018-demo,https://github.com/water-hole/ansiblefest-2018-demo
