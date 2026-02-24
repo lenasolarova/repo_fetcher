@@ -15,9 +15,9 @@ def fetch_repos(org_name):
     print(f"Fetching repositories from {org_name}...")
 
     try:
-        # Use gh CLI to fetch repos
+        # Use gh CLI to fetch repos with nameWithOwner for DevLake format
         result = subprocess.run(
-            ['gh', 'repo', 'list', org_name, '--limit', '1000', '--json', 'name,url'],
+            ['gh', 'repo', 'list', org_name, '--limit', '1000', '--json', 'nameWithOwner,url'],
             capture_output=True,
             text=True,
             check=True
@@ -40,10 +40,10 @@ def save_to_csv(repos, org_name):
 
     with open(filename, 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow(['Name', 'URL'])
+        writer.writerow(['Repository', 'URL'])
 
         for repo in repos:
-            writer.writerow([repo['name'], repo['url']])
+            writer.writerow([repo['nameWithOwner'], repo['url']])
 
     print(f"Saved {len(repos)} repositories to {filename}")
 
