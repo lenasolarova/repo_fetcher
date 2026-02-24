@@ -1,0 +1,13 @@
+water-hole/crane-batch-migration
+water-hole/poc-retablir
+water-hole/transformations
+water-hole/extractor
+water-hole/etcd-ansible-operator
+water-hole/galera-ansible-operator
+water-hole/ansible-operator
+water-hole/kind
+water-hole/bitcoin-sv-operator
+water-hole/vault-ansible-operator
+water-hole/ao-training-modules
+water-hole/memcached-ansible-operator
+water-hole/ansiblefest-2018-demo

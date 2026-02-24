@@ -35,17 +35,25 @@ def fetch_repos(org_name):
 
 
 def save_to_csv(repos, org_name):
-    """Save repositories to a CSV file."""
-    filename = f"{org_name}_repos.csv"
+    """Save repositories to a CSV file and a text file for easy copying."""
+    csv_filename = f"{org_name}_repos.csv"
+    txt_filename = f"{org_name}_repos.txt"
 
-    with open(filename, 'w', newline='') as csvfile:
+    # Save CSV with both repository and URL
+    with open(csv_filename, 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow(['Repository', 'URL'])
 
         for repo in repos:
             writer.writerow([repo['nameWithOwner'], repo['url']])
 
-    print(f"Saved {len(repos)} repositories to {filename}")
+    # Save plain text file with just repository names (one per line)
+    with open(txt_filename, 'w') as txtfile:
+        for repo in repos:
+            txtfile.write(f"{repo['nameWithOwner']}\n")
+
+    print(f"Saved {len(repos)} repositories to {csv_filename}")
+    print(f"Saved repository list to {txt_filename} (easy copy format)")
 
 
 def main():
